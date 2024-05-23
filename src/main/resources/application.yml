@@ -12,6 +12,12 @@ spring:
     driver-class-name: org.h2.Driver
   jpa:
     show-sql: true
+
+server:
+  servlet:
+    encoding:
+      charset: utf-8
+      force-response: true
 #server:
 #  data:
 #    web:
