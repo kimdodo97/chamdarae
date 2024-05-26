@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" th:href="@{css/login-form.css}" href="css/style.css" />
+    <link rel="stylesheet" th:href="@{css/reset.css}" href="./css/reset.css" />
+    <script th:src="@{js/login.js}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<h1>
+    <a href="#"><img th:src="@{asset/login/logo_500.png}" alt="참다래" /></a>
+</h1>
+<main>
+    <form action="#" method="post" id="login-form">
+        <fieldset>
+            <legend class="skip">로그인 양식</legend>
+            <ul>
+                <li>
+                    <span class="id_bg"> </span>
+                    <span
+                    ><input type="text" name="user_id" placeholder="아이디"
+                    /></span>
+                </li>
+                <li class="error id-error">아이디를 입력해주세요</li>
+                <li>
+                    <span class="pw_bg"></span>
+                    <span
+                    ><input
+                            type="password"
+                            name="user_password"
+                            placeholder="비밀번호" />
+                <span class="pw_show_hide" title="비밀번호 보기"></span
+                >
+                    </span>
+                </li>
+                <li class="error pw-error">비밀번호를 입력해주세요</li>
+            </ul>
+            <div class="btm">
+                <p>
+                    <label>
+                        <input type="checkbox" name="login_y" id="login_y" />
+                        <span>자동로그인</span>
+                    </label>
+                </p>
+                <a href="#" class="idpw_search">아이디/비밀번호 찾기</a>
+            </div>
+            <button type="submit" id="login-btn">로그인</button>
+        </fieldset>
+    </form>
+    <a href="#" class="join_link">회원가입</a>
+</main>
+<footer>&copy; Kimdodo Corp. All right reserved.</footer>
+</body>
+</html>
