@@ -25,4 +25,7 @@ public class Recipe {
 
     @OneToMany(mappedBy = "recipe")
     private List<Comment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "recipe")
+    private List<RecipeIngredient> recipeIngredients = new ArrayList<>();
 }
