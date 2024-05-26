@@ -43,8 +43,8 @@ public class MemberCreate {
         this.name = name;
         this.gender = gender;
         this.email = email;
-        this.loginId = loginId;
         this.password = password;
+        this.loginId = loginId;
         this.nickname = nickname;
         this.phone = phone;
         this.birthDate = birthDate;

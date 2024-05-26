@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class MemberController {
     private final MemberService memberService;
-
     @PostMapping("/member")
     public void join(@RequestBody @Valid MemberCreate request){
         Long joinId = memberService.join(request);

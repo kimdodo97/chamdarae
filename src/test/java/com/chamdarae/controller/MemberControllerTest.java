@@ -71,9 +71,9 @@ class MemberControllerTest {
         //then
         assertEquals(1L,memberRepository.count());
         Member findedMember = memberRepository.findAll().get(0);
-        assertEquals(findedMember.getMemberLoginId(),request.getLoginId());
-        assertEquals(findedMember.getMemberPassWord(),request.getPassword());
-        assertEquals(findedMember.getMemberEmail(),request.getEmail());
+        assertEquals(findedMember.getLoginId(),request.getLoginId());
+        assertEquals(findedMember.getPassword(),request.getPassword());
+        assertEquals(findedMember.getEmail(),request.getEmail());
     }
 
     @Test
@@ -81,13 +81,13 @@ class MemberControllerTest {
     void test2() throws Exception {
         //given
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberNickname("kimdodo")
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .nickname("kimdodo")
                 .build();
 
         memberRepository.save(member);
@@ -96,7 +96,7 @@ class MemberControllerTest {
                         .contentType(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(member.getId()))
-                .andExpect(jsonPath("$.loginId").value(member.getMemberLoginId()))
+                .andExpect(jsonPath("$.loginId").value(member.getLoginId()))
                 .andDo(print());
 
     }
@@ -107,14 +107,14 @@ class MemberControllerTest {
         //given
         LocalDate birthDate = LocalDate.of(1997,11,4);
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberNickname("kimdodo")
-                .memberBirthDate(birthDate)
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .nickname("kimdodo")
+                .birthDate(birthDate)
                 .build();
 
         memberRepository.save(member);
@@ -123,12 +123,12 @@ class MemberControllerTest {
         String otherNickname = "dodokim";
 
         MemberEdit memberEdit = MemberEdit.builder()
-                .name(member.getMemberName())
+                .name(member.getName())
                 .gender(Gender.MALE)
                 .password(otherPassword)
-                .phone(member.getMemberPhone())
-                .email(member.getMemberEmail())
-                .birthDate(member.getMemberBirthDate())
+                .phone(member.getPhone())
+                .email(member.getEmail())
+                .birthDate(member.getBirthDate())
                 .nickname(otherNickname)
                 .city("부산")
                 .street("전포대로")
@@ -150,13 +150,13 @@ class MemberControllerTest {
     void test4() throws Exception {
         //given
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberNickname("kimdodo")
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .nickname("kimdodo")
                 .build();
 
         memberRepository.save(member);
@@ -178,7 +178,7 @@ class MemberControllerTest {
                 .name("김도도")
                 .gender(Gender.MALE)
                 .loginId("ehdud326")
-                .password("dodo")
+                .loginId("dodo")
                 .phone("010-3344-4954")
                 .birthDate(birthDate)
                 .nickname("kimdodo")

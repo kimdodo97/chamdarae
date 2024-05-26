@@ -60,8 +60,8 @@ class MemberServiceTest {
         Member findMember = memberRepository.findById(memberId).get();
 
         //then
-        assertEquals(findMember.getMemberLoginId(),memberCreate.getLoginId());
-        assertEquals(findMember.getMemberPassWord(),memberCreate.getPassword());
+        assertEquals(findMember.getLoginId(),memberCreate.getLoginId());
+        assertEquals(findMember.getPassword(),memberCreate.getPassword());
     }
     
     @Test
@@ -73,7 +73,7 @@ class MemberServiceTest {
                 .name("김도도")
                 .gender(Gender.MALE)
                 .loginId("ehdud326")
-                .password("dodo")
+                .loginId("dodo")
                 .phone("010-3344-4954")
                 .email("eh4536@naver.com")
                 .birthDate(birthDate)
@@ -89,7 +89,7 @@ class MemberServiceTest {
                 .name("김도도")
                 .gender(Gender.MALE)
                 .loginId("ehdud326")
-                .password("dodo")
+                .loginId("dodo")
                 .phone("010-3344-4954")
                 .email("eh4536@naver.com")
                 .birthDate(birthDate)
@@ -109,10 +109,10 @@ class MemberServiceTest {
         //given
         LocalDate birthDate = LocalDate.of(1997,11,4);
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo123")
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo123")
                 .build();
         memberRepository.save(member);
         //when
@@ -127,10 +127,10 @@ class MemberServiceTest {
         //given
         LocalDate birthDate = LocalDate.of(1997,11,4);
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo123")
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo123")
                 .build();
         memberRepository.save(member);
         //expect
@@ -146,15 +146,15 @@ class MemberServiceTest {
 
         String changedNickname = "dodokim";
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberBirthDate(birthDate)
-                .memberNickname("kimdodo")
-                .memberAddress(address)
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .birthDate(birthDate)
+                .nickname("kimdodo")
+                .address(address)
                 .build();
 
         memberRepository.save(member);
@@ -167,7 +167,7 @@ class MemberServiceTest {
         Member changedMember = memberRepository.findById(member.getId())
                 .orElseThrow(MemberNotFound::new);
 
-        assertEquals(changedNickname,changedMember.getMemberNickname());
+        assertEquals(changedNickname,changedMember.getNickname());
     }
 
     @Test
@@ -175,13 +175,13 @@ class MemberServiceTest {
     void test6() throws Exception {
         //given
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberNickname("kimdodo")
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .nickname("kimdodo")
                 .build();
 
         memberRepository.save(member);
@@ -196,13 +196,13 @@ class MemberServiceTest {
     void test7() throws Exception {
         //given
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberNickname("kimdodo")
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .nickname("kimdodo")
                 .build();
 
         memberRepository.save(member);
@@ -225,15 +225,15 @@ class MemberServiceTest {
 
         String changedNickname = "dodokim";
         Member member = Member.builder()
-                .memberName("김도도")
-                .memberGender(Gender.MALE)
-                .memberLoginId("ehdud326")
-                .memberPassWord("dodo")
-                .memberPhone("010-3344-4954")
-                .memberEmail("eh4536@naver.com")
-                .memberBirthDate(birthDate)
-                .memberNickname("kimdodo")
-                .memberAddress(address)
+                .name("김도도")
+                .gender(Gender.MALE)
+                .loginId("ehdud326")
+                .password("dodo")
+                .phone("010-3344-4954")
+                .email("eh4536@naver.com")
+                .birthDate(birthDate)
+                .nickname("kimdodo")
+                .address(address)
                 .build();
 
         memberRepository.save(member);
@@ -248,7 +248,7 @@ class MemberServiceTest {
         Member changedMember = memberRepository.findById(member.getId())
                 .orElseThrow(MemberNotFound::new);
 
-        assertEquals(changedNickname,changedMember.getMemberNickname());
-        assertEquals("dodo",changedMember.getMemberPassWord());
+        assertEquals(changedNickname,changedMember.getNickname());
+        assertEquals("dodo",changedMember.getPassword());
     }
 }

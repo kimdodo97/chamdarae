@@ -98,7 +98,7 @@ public class MemberEditor {
         }
 
         public MemberEditorBuilder address(final Address address) {
-            if(address!=null){
+            if(birthDate!=null){
                 this.address = address;
             }
             return this;
@@ -109,7 +109,7 @@ public class MemberEditor {
         }
 
         public String toString() {
-            return "MemberEditor.MemberEditorBuilder(name=" + this.name + ", gender=" + this.gender + ", email=" + this.email + ", password=" + this.password + ", nickname=" + this.nickname + ", phone=" + this.phone + ", birthDate=" + this.birthDate + ", address=" + this.address + ")";
+            return "MemberEditor.MemberEditorBuilder(name=" + this.name + ", gender=" + this.gender + ", email=" + this.email + ", loginId=" + this.password + ", nickname=" + this.nickname + ", phone=" + this.phone + ", birthDate=" + this.birthDate + ", birthDate=" + this.birthDate + ")";
         }
     }
 }

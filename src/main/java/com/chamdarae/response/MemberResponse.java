@@ -23,15 +23,15 @@ public class MemberResponse {
 
     public MemberResponse(Member member) {
         id = member.getId();
-        email = member.getMemberEmail();
-        loginId = member.getMemberLoginId();
-        password = member.getMemberPassWord();
-        name = member.getMemberName();
-        nickname = member.getMemberNickname();
-        gender = member.getMemberGender();
-        phone = member.getMemberPhone();
-        birth = member.getMemberBirthDate();
-        address = member.getMemberAddress();
+        email = member.getEmail();
+        loginId = member.getLoginId();
+        password = member.getPassword();
+        name = member.getName();
+        nickname = member.getNickname();
+        gender = member.getGender();
+        phone = member.getPhone();
+        birth = member.getBirthDate();
+        address = member.getAddress();
     }
 
     @Builder
@@ -40,7 +40,7 @@ public class MemberResponse {
         this.id = id;
         this.email = email;
         this.loginId = loginId;
-        this.password = password;
+        this.loginId = loginId;
         this.name = name;
         this.nickname = nickname;
         this.gender = gender;

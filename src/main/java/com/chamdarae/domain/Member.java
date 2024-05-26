@@ -21,25 +21,25 @@ public class Member {
     private Long id;
 
     @Column(unique = true)
-    private String memberEmail;
+    private String email;
 
     @Column(unique = true)
-    private String memberLoginId;
+    private String loginId;
 
-    private String memberPassWord;
+    private String password;
 
-    private String memberName;
+    private String name;
 
     @Column(unique = true)
-    private String memberNickname;
+    private String nickname;
 
-    private Gender memberGender;
+    private Gender gender;
 
-    private String memberPhone;
+    private String phone;
 
-    private LocalDate memberBirthDate;
+    private LocalDate birthDate;
     @Embedded
-    private Address memberAddress;
+    private Address address;
 
     @OneToMany(mappedBy = "member")
     private List<Recipe> recipes = new ArrayList<>();
@@ -48,40 +48,40 @@ public class Member {
     private List<Comment> comments = new ArrayList<>();
 
     @Builder
-    public Member(String memberEmail, String memberLoginId, String memberPassWord, String memberName, String memberNickname, Gender memberGender, String memberPhone, LocalDate memberBirthDate, Address memberAddress, List<Recipe> recipes, List<Comment> comments) {
-        this.memberEmail = memberEmail;
-        this.memberLoginId = memberLoginId;
-        this.memberPassWord = memberPassWord;
-        this.memberName = memberName;
-        this.memberNickname = memberNickname;
-        this.memberGender = memberGender;
-        this.memberPhone = memberPhone;
-        this.memberBirthDate = memberBirthDate;
-        this.memberAddress = memberAddress;
+    public Member(String email, String loginId, String password, String name, String nickname, Gender gender, String phone, LocalDate birthDate, Address address, List<Recipe> recipes, List<Comment> comments) {
+        this.email = email;
+        this.loginId = loginId;
+        this.password = password;
+        this.name = name;
+        this.nickname = nickname;
+        this.gender = gender;
+        this.phone = phone;
+        this.birthDate = birthDate;
+        this.address = address;
         this.recipes = recipes;
         this.comments = comments;
     }
 
     public MemberEditor.MemberEditorBuilder toEditor(){
         return MemberEditor.builder()
-                .name(memberName)
-                .email(memberEmail)
-                .gender(memberGender)
-                .nickname(memberNickname)
-                .phone(memberPhone)
-                .password(memberPassWord)
-                .birthDate(memberBirthDate)
-                .address(memberAddress);
+                .name(name)
+                .email(email)
+                .gender(gender)
+                .nickname(nickname)
+                .phone(phone)
+                .password(password)
+                .birthDate(birthDate)
+                .address(address);
     }
 
     public void edit(MemberEditor memberEditor){
-        memberName = memberEditor.getName();
-        memberPassWord = memberEditor.getPassword();
-        memberEmail  = memberEditor.getEmail();
-        memberGender = memberEditor.getGender();
-        memberNickname = memberEditor.getNickname();
-        memberPhone = memberEditor.getPhone();
-        memberBirthDate = memberEditor.getBirthDate();
-        memberAddress = memberEditor.getAddress();
+        name = memberEditor.getName();
+        password = memberEditor.getPassword();
+        email  = memberEditor.getEmail();
+        gender = memberEditor.getGender();
+        nickname = memberEditor.getNickname();
+        phone = memberEditor.getPhone();
+        birthDate = memberEditor.getBirthDate();
+        address = memberEditor.getAddress();
     }
 }
