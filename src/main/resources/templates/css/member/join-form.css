@@ -1,0 +1,37 @@
+h1 {
+  text-align: center;
+  margin: 50px auto 30px;
+}
+h1 a img {
+  width: 350px;
+  margin: 40px;
+}
+
+main {
+  margin: 0 auto;
+  width: 70%;
+}
+
+main #join-form {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+#userIdSuccess {
+  color: #2f9101;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 12px;
+  padding: 6px;
+  display: none;
+  border: 0;
+}
+
+#userIdFail {
+  color: #db2f18;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 12px;
+  padding: 6px;
+  display: none;
+  border: 0;
+}
