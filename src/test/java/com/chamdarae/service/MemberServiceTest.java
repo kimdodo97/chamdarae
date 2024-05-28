@@ -50,8 +50,8 @@ class MemberServiceTest {
                 .email("eh4536@naver.com")
                 .birthDate(birthDate)
                 .nickname("kimdodo")
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
 
@@ -78,8 +78,8 @@ class MemberServiceTest {
                 .email("eh4536@naver.com")
                 .birthDate(birthDate)
                 .nickname("kimdodo")
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
 
@@ -94,8 +94,8 @@ class MemberServiceTest {
                 .email("eh4536@naver.com")
                 .birthDate(birthDate)
                 .nickname("kimdodo")
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
         //when

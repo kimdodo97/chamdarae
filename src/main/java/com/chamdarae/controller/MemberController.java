@@ -15,6 +15,19 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class MemberController {
     private final MemberService memberService;
+
+//    @GetMapping( "/member/login")
+//    public String loginForm() {
+//        System.out.println("login");
+//        return "view/login";
+//    }
+//
+//    @GetMapping("/member/join")
+//    public String joinForm(){
+//        System.out.println("join");
+//        return "view/join";
+//    }
+
     @PostMapping("/member")
     public void join(@RequestBody @Valid MemberCreate request){
         Long joinId = memberService.join(request);

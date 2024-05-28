@@ -36,8 +36,8 @@ public class MemberEdit {
 
     @Builder
     public MemberEdit(String name, Gender gender, String email,
-                      String password, String nickname, String phone, LocalDate birthDate, String city,
-                      String street,String zipcode) {
+                      String password, String nickname, String phone, LocalDate birthDate, String mainAddr,
+                      String detailAddr,String zipcode) {
         this.name = name;
         this.gender = gender;
         this.email = email;
@@ -45,6 +45,6 @@ public class MemberEdit {
         this.nickname = nickname;
         this.phone = phone;
         this.birthDate = birthDate;
-        this.address = new Address(city, street, zipcode);
+        this.address = new Address(mainAddr, detailAddr, zipcode);
     }
 }

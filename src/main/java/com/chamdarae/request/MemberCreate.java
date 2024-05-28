@@ -39,7 +39,7 @@ public class MemberCreate {
 
     @Builder
     public MemberCreate(String name, Gender gender, String email, String loginId, String password, String nickname,
-                        String phone, LocalDate birthDate,String city, String street, String zipcode) {
+                        String phone, LocalDate birthDate,String mainAddr, String detailAddr, String zipcode) {
         this.name = name;
         this.gender = gender;
         this.email = email;
@@ -49,8 +49,8 @@ public class MemberCreate {
         this.phone = phone;
         this.birthDate = birthDate;
         this.address = Address.builder()
-                .city(city)
-                .street(street)
+                .mainAddr(mainAddr)
+                .detailAddr(detailAddr)
                 .zipcode(zipcode)
                 .build();
     }
