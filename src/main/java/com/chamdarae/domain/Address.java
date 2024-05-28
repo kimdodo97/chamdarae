@@ -7,18 +7,18 @@ import lombok.Getter;
 @Embeddable
 @Getter
 public class Address {
-    private String city;
-    private String street;
     private String zipcode;
+    private String mainAddr;
+    private String detailAddr;
 
     protected Address(){
 
     }
 
     @Builder
-    public Address(String city, String street, String zipcode) {
-        this.city = city;
-        this.street = street;
+    public Address(String mainAddr, String detailAddr, String zipcode) {
+        this.mainAddr = mainAddr;
+        this.detailAddr = detailAddr;
         this.zipcode = zipcode;
     }
 }
