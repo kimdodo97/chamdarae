@@ -56,8 +56,8 @@ class MemberControllerTest {
                 .email("eh4536@naver.com")
                 .birthDate(birthDate)
                 .nickname("kimdodo")
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
 
@@ -130,8 +130,8 @@ class MemberControllerTest {
                 .email(member.getEmail())
                 .birthDate(member.getBirthDate())
                 .nickname(otherNickname)
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
 
@@ -182,8 +182,8 @@ class MemberControllerTest {
                 .phone("010-3344-4954")
                 .birthDate(birthDate)
                 .nickname("kimdodo")
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
 
@@ -220,8 +220,8 @@ class MemberControllerTest {
                 .email("test@test.com")
                 .birthDate(LocalDate.of(2024,05,23))
                 .nickname("kimdodo")
-                .city("부산")
-                .street("전포대로")
+                .mainAddr("부산")
+                .detailAddr("전포대로")
                 .zipcode("1234")
                 .build();
 
