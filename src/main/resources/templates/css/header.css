@@ -1,0 +1,10 @@
+/* 헤더 스타일 */
+header {
+  background-color: #1a2902;
+  padding: 10px; /* 내부 여백 추가 */
+  text-decoration: none;
+}
+
+.app-name {
+  color: azure;
+}

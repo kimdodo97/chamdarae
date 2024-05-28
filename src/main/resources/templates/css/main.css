@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  height: 145px;
+  text-align: center;
+  background-color: thistle;
+  box-sizing: border-box;
+  border-bottom: 1px solid #999;
+}
+
+.header-logo h1 {
+  font: bold 40px "arial";
+  padding-top: 14px;
+  letter-spacing: 5px;
+}
+
+.header-gnb p {
+  font: bold 12px "arial";
+  letter-spacing: 2px;
+  margin-top: -1px;
+}
+
+.header-gnb ul {
+  margin-top: 39px;
+}
+
+.header-gnb ul li {
+  display: inline-block;
+}
+
+.header-gnb ul li a {
+  display: block;
+  font: bold 14px;
+}

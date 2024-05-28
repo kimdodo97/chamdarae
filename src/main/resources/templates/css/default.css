@@ -1,0 +1,11 @@
+* {
+  font-family: "Jua", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 30px;
+}

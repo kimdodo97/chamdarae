@@ -1,0 +1,60 @@
+/* 하단 메뉴바 스타일 */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.bottom_menu {
+  display: flex; /* 가로 정렬을 위해 flexbox 사용 */
+  justify-content: center; /* 각 요소를 가로로 균일하게 배치 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+
+.bottom_menu ul {
+  list-style-type: none; /* 리스트 마커 제거 */
+  margin: 0;
+  padding: 0;
+}
+
+.bottom_menu li {
+  display: inline-block; /* 가로로 배치 */
+  margin-right: 35px;
+}
+
+.bottom_menu li:last-child {
+  margin-right: 0; /* 마지막 요소의 오른쪽 마진 제거 */
+}
+
+.bottom_menu li::before {
+  content: ""; /* 가상 요소 생성 */
+  position: absolute;
+  top: 50%; /* 수직 가운데 정렬 */
+  left: 0;
+  width: 20px; /* 이미지 너비 설정 */
+  height: 20px; /* 이미지 높이 설정 */
+  background-image: url(../asset/icon.png); /* 아이콘 이미지 경로 설정 */
+  background-size: cover; /* 배경 이미지 크기 조절 */
+  transform: translateY(-50%); /* 수직 가운데 정렬을 위한 변형 */
+  opacity: 0; /* 초기에는 투명하게 설정 */
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 아이콘 아래에 텍스트 표시 */
+.bottom_menu li span {
+  position: absolute;
+  top: 100%; /* 아이콘 아래에 표시되도록 설정 */
+  left: 50%; /* 가운데 정렬을 위해 왼쪽 정렬 */
+  transform: translateX(-50%); /* 수평 가운데 정렬 */
+  opacity: 0; /* 초기에는 투명하게 설정 */
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 호버링 시 아이콘 이미지와 텍스트 표시 */
+.bottom_menu li:hover::before,
+.bottom_menu li:hover span {
+  opacity: 1; /* 투명도 설정 */
+}
